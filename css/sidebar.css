@@ -1,0 +1,114 @@
+.left-bar-line{
+    
+    width: 0.1vw;
+    height: 60vh;
+    background-color: #4FCB6B;
+    position: absolute;
+    left: 50vh;
+    top: 36vh;
+}
+
+.bar-options{
+
+    height: 60vh;
+    width: 25vh;
+    left: 7vh;
+    top: 38vh;
+    position: absolute;
+    display: block;
+    font-weight: normal !important;
+}
+
+.fake-name-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vh;
+    color: black;
+    position: absolute;
+    font-weight: 520;
+    top: -7%;
+    user-select: none;
+    margin-bottom: 10vh;
+    font-weight: normal;
+    text-decoration: none;
+    font-weight: normal !important;
+}
+
+.personal-data-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 13vh;
+    cursor: pointer;
+    user-select: none;
+    font-weight: normal !important;
+}
+
+.manage-address-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 5vh;
+    cursor: pointer;
+    user-select: none;
+    font-weight: normal !important;
+}
+
+.my-wishlist-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 5vh;
+    cursor: pointer;
+    user-select: none;
+    font-weight: normal !important;
+}
+
+.my-garage-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 5vh;
+    cursor: pointer;
+    user-select: none;
+    font-weight: normal !important;
+}
+
+.my-appointments-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 5vh;
+    cursor: pointer;
+    user-select: none;
+    font-weight: normal !important;
+}
+
+.settings-text{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 5vh;
+    cursor: pointer;
+    user-select: none;
+    font-weight: normal !important;
+}
+

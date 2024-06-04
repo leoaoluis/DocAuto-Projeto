@@ -1,0 +1,249 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+#calendar-container {
+    display: flex;
+    align-items:center; /* Center vertically */
+    justify-content: flex-end; /* Align to the right */
+    gap: 20px;
+    max-width: 800px;
+}
+
+#calendar {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 50px;
+    background-color: #014357; /* Define a cor de fundo do cabeçalho do calendário */
+    color: white; /* Define a cor do texto como branco para garantir boa legibilidade */
+}
+
+#calendar-body {
+    padding: 10px;
+}
+
+#days-of-week, #calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+#days-of-week div, .date {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.date {
+    cursor: pointer;
+}
+
+.date.event {
+    background-color: #ffeb3b;
+}
+
+.date.selected {
+    background-color: #ffa500; /* Cor para o dia selecionado */
+}
+
+.date.today {
+    background-color: #4FCB6B; /* Cor para o dia atual */
+}
+
+.date.empty {
+    background-color: transparent;
+    border: none;
+}
+
+#event-list {
+    width: 300px;
+    overflow-y: auto; /* Adicione a barra de rolagem quando necessário */
+    padding: 10px;
+}
+
+
+#event-list h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#events {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#events li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 5px; /* Altura reduzida */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#events li .event-title {
+    flex-grow: 1;
+    text-align: left;
+}
+
+#events li .event-actions button {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline; /* Sempre visível */
+}
+
+#events li .event-actions button:hover {
+    color: red;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.event-item {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+#add-event-button {
+    background-color: #014357;
+}
+
+#event-list {
+    max-height: 300px; /* Ajuste conforme necessário */
+    overflow-y: auto; /* Adicione a barra de rolagem quando necessário */
+}
+
+.selected {
+    text-decoration: underline; /* Adiciona o sublinhado ao dia selecionado */
+}
+
+#prev-month,
+#next-month {
+    background-color: #014357; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 30%; /* Bordas arredondadas para criar um botão circular */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+#prev-month:hover,
+#next-month:hover {
+    background-color: #012d42; /* Cor de fundo alterada no hover */
+}
+
+#today-button {
+    background-color: #4FCB6B;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 10px;
+    margin-left: 5px; /* Adiciona um espaço à esquerda dos botões de navegação */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#today-button:hover {
+    background-color: #47b35b; /* Altera a cor de fundo no hover */
+    font-size: 20px;
+}
+
+#today-button-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #014357;
+    color: white;
+    justify-content: center;
+    height: 30px;   
+}
+
+#hide-list-button-box{
+
+    width: 295px;
+    position: absolute;
+    align-items: right;
+    display: flex;
+    justify-content: right;
+}
+
+#hide-list-button{
+    align-items: center;
+    background-color: #014357;
+    color: white;
+    justify-content: center;
+    width: 12%;
+    height: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: transparent;
+    font-size: 18px;
+    background-color: red;
+}
+
+#add-event-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-event-button:hover {
+    background-color: #ff0c9a;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocAuto</title>
+    <link rel="stylesheet" href="css/billing.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <a href="home.html" class="logo-box">
+            <img src="assets/logo.png" alt="DocAuto" class="logo">
+        </a>
+        <a href="profile.html" class="profile-icon">
+            <img src="assets/profile-icon.png" alt="Profile" class="profile-icon-img">
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button">SEARCH</button>
+    </div>
+    <div class="content">
+        <section class="most-searched">
+            <h2>Billing information</h2>
+            <div class="parts">
+                <a class="part-item">
+                    <p id="user-info"><strong>User:</strong>Emily, emily48@gmail.com</p>
+                    <p><strong>Address:</strong>Rua do Bugalho 3555 - 111, Leiria</p>
+                    <p><strong>NIF:</strong> 111111111</p>
+                    <p><strong>Phone:</strong> 222222222</p>
+                </a>
+                <a href="address.html" class="bottom-button">Change address</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <img src="assets/filters.png" alt="Imagem" class="container-image">
+        <h2 class="container-title">Summary review</h2>
+        <p class="container-text">CarThings A7234 - Air filter</p>
+        <p class="container-text2">Quantity: 1</p>
+        <p class="container-text2">Shipping cost: 2,99$</p>
+        <p class="container-text2">Subtotal cart: 5,30$</p>
+        <p class="container-text3">Total: 8,30$</p>
+        <a href="payment.html" class="checkout-button">Next</a>
+    </div>
+    <script src="billing.js"></script>
+</body>
+</html>

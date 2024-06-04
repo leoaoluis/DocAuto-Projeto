@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - DOCAUTO</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <div class="logo-box">
+            <a href="home.html">
+                <img src="assets/logo.png" alt="DocAuto" class="logo">
+            </a>
+        </div>
+        <a href="profile.html" class="auth-icon" id="auth-link">
+            <img src="assets/profile.png" alt="Profile" class="auth-icon-img">
+            <span id="auth-text">Profile</span>
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+        </select>
+        <input type="text" id="search-term" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button" onclick="performSearch()">SEARCH</button>
+    </div>
+    <div class="content">
+        <h2>Filters</h2>
+        <div id="results-for-vehicle" class="results-section">
+            <h3>For your vehicle:</h3>
+            <div id="vehicle-results" class="results-list"></div>
+        </div>
+        <div id="more-filters" class="results-section">
+            <h3>More filters:</h3>
+            <div id="more-results" class="results-list"></div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

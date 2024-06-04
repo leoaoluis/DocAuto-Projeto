@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #014357;
+    height: 15vh;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.my-garage-icon {
+    height: 8vh;
+    width: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.my-garage-icon-img {
+    height: 100%;
+    width: auto;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.logo {
+    height: 80%;
+    width: auto;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 15vh);
+    background-color: #f1f1f1;
+}
+
+.login-box {
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 1em;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    text-align: left;
+    margin-bottom: 0.5em;
+    color: #014357;
+}
+
+.login-box input {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4FCB6B;
+    color: white;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #45b963;
+}
+
+.login-box p {
+    margin-top: 1em;
+    color: #333;
+}
+
+.login-box p a {
+    color: #014357;
+    text-decoration: none;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}

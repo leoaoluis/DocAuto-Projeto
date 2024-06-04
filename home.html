@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocAuto</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="home.js" defer></script>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <div class="logo-box">
+            <a href="home.html">
+                <img src="assets/logo.png" alt="DocAuto" class="logo">
+            </a>
+        </div>
+        <a href="login.html" class="auth-icon" id="auth-link">
+            <img src="assets/profile.png" alt="Sign In" class="auth-icon-img" id="auth-icon-img">
+            <span id="auth-text">Sign In</span>
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+        </select>
+        <input type="text" id="search-term" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button" onclick="performSearch()">SEARCH</button>
+    </div>
+    <div class="content">
+        <section class="most-searched">
+            <h2>Most Searched Parts:</h2>
+            <div class="parts">
+                <a href="exhaust.html" class="part-item">
+                    <img src="assets/exhaust.png" alt="Exhaust">
+                    <p>Exhaust</p>
+                </a>
+                <a href="tyres.html" class="part-item">
+                    <img src="assets/tyres.png" alt="Tyres">
+                    <p>Tyres</p>
+                </a>
+                <a href="breaks.html" class="part-item">
+                    <img src="assets/breaks.png" alt="Breaks">
+                    <p>Breaks</p>
+                </a>
+                <a href="suspension.html" class="part-item">
+                    <img src="assets/suspension.png" alt="Suspension">
+                    <p>Suspension</p>
+                </a>
+                <a href="checkout.html" class="part-item">
+                    <img src="assets/filters.png" alt="Filters">
+                    <p>Filters</p>
+                </a>
+            </div>
+        </section>
+        <section class="search-by-brand">
+            <h2>Search by Brand:</h2>
+            <div class="brands">
+                <a href="bmw.html" class="brand-item">
+                    <img src="assets/bmw.png" alt="BMW">
+                </a>
+                <a href="audi.html" class="brand-item">
+                    <img src="assets/audi.png" alt="Audi">
+                </a>
+                <a href="vw.html" class="brand-item">
+                    <img src="assets/vw.png" alt="Volkswagen">
+                </a>
+                <a href="ford.html" class="brand-item">
+                    <img src="assets/ford.png" alt="Ford">
+                </a>
+                <a href="mercedes.html" class="brand-item">
+                    <img src="assets/mercedes.png" alt="Mercedes">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+            const authLink = document.getElementById('auth-link');
+            const authText = document.getElementById('auth-text');
+            const authIcon = document.getElementById('auth-icon-img');
+
+            if (currentUser) {
+                authText.textContent = "Profile";
+                authLink.href = "profile.html";
+                authIcon.src = "assets/profile.png";
+                authIcon.alt = "Profile";
+            } else {
+                authText.textContent = "Sign In";
+                authLink.href = "login.html";
+                authIcon.src = "assets/profile.png";
+                authIcon.alt = "Sign In";
+            }
+        });
+
+        function performSearch() {
+            const type = document.getElementById('type').value;
+            const searchTerm = document.getElementById('search-term').value;
+            window.location.href = `results.html?type=${type}&term=${searchTerm}`;
+        }
+    </script>
+</body>
+</html>

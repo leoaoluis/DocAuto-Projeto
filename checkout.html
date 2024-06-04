@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocAuto</title>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <a href="home.html" class="logo-box">
+            <img src="assets/logo.png" alt="DocAuto" class="logo">
+        </a>
+        <a href="profile.html" class="profile-icon">
+            <img src="assets/profile-icon.png" alt="Profile" class="profile-icon-img">
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button">SEARCH</button>
+    </div>
+    <div class="content">
+        <section class="most-searched">
+            <h2>My Cart</h2>
+            <div class="parts">
+                <a class="part-item">
+                    <img src="assets/filters.png" alt="Filters">
+                    <h1>CarThings A7234 - Air filter</h1>
+                    <p>207mm, 131mm, round, filter cartridge, with integrated grid</p>
+                </a>
+            </div>
+        </section>
+        <div>
+            <a href="billing.html" class="checkout-button">Checkout</a> <!-- Adiciona o botão Checkout com link -->
+        </div>
+        <div class="horizontal-bar-line" ></div>
+        <div class="align-text">
+            <p>
+                <strong>Subtotal Cart:</strong> 5.30$
+            </p>
+            <p>
+                <strong>Shipping cost:</strong> 2.99$
+            </p>
+            <p>
+                <strong>Total:</strong> 8.29$
+            </p>
+        </div>
+    </div>
+    
+    
+    
+    
+</body>
+</html>

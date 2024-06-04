@@ -1,0 +1,400 @@
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #014357;
+    height: 15vh;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.my-garage-icon {
+    height: 8vh;
+    width: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.my-garage-icon-img {
+    height: 100%;
+    width: auto;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.logo {
+    height: 80%;
+    width: auto;
+}
+
+.profile-icon {
+    text-decoration: none;
+    height: 8vh;
+    width: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon-img {
+    height: 100%;
+    width: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #014357;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-label {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.search-dropdown {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4FCB6B;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #45b963;
+}
+
+/* Profile Box */
+.left-bar-line {
+    width: 2px;
+    height: 60vh;
+    background-color: #4FCB6B;
+    position: absolute;
+    left: 30vh;
+    top: 36vh;
+}
+
+.bar-options {
+    height: 60vh;
+    width: 25vh;
+    left: 7vh;
+    top: 38vh;
+    position: absolute;
+    display: block;
+}
+
+.fake-name-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vh;
+    color: black;
+    position: absolute;
+    font-weight: 520;
+    top: -7%;
+    user-select: none;
+    margin-bottom: 10vh;
+}
+
+.personal-data-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 13vh;
+    cursor: pointer;
+    user-select: none;
+}
+
+.manage-address-text, .my-wishlist-text, .my-garage-text, .my-appointments-text, .settings-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3vh;
+    color: black;
+    font-weight: 550;
+    text-decoration: underline;
+    margin-top: 5vh;
+    cursor: pointer;
+    user-select: none;
+}
+
+.my-appointments-text {
+    color: blue;
+}
+
+/* Calendar and Events */
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-grow: 1; 
+}
+
+#calendar-container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; /* Centrado horizontal */
+    gap: 20px;
+    max-width: 800px;
+}
+
+#calendar {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ajuste vertical */
+    height: 50px;
+    background-color: #014357;
+    color: white;
+}
+
+#calendar-body {
+    padding: 10px;
+}
+
+#days-of-week, #calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+#days-of-week div, .date {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.date {
+    cursor: pointer;
+}
+
+.date.event {
+    background-color: #ffeb3b;
+}
+
+.date.selected {
+    background-color: #ffa500; /* Cor para o dia selecionado */
+}
+
+.date.today {
+    background-color: #4FCB6B; /* Cor para o dia atual */
+}
+
+.date.empty {
+    background-color: transparent;
+    border: none;
+}
+
+#event-list {
+    width: 300px;
+    overflow-y: auto; /* Adicione a barra de rolagem quando necessário */
+    padding: 10px;
+    max-height: 400px; /* Limite de altura para melhor visualização */
+}
+
+#event-list h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#events {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#events li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 5px; /* Altura reduzida */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#events li .event-title {
+    flex-grow: 1;
+    text-align: left;
+}
+
+#events li .event-actions button {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline; /* Sempre visível */
+}
+
+#events li .event-actions button:hover {
+    color: red;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.event-item {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+#add-event-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-event-button:hover {
+    background-color: #ff0c9a;
+}
+
+.selected {
+    text-decoration: underline; /* Adiciona o sublinhado ao dia selecionado */
+}
+
+#prev-month,
+#next-month {
+    background-color: #014357; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 30%; /* Bordas arredondadas para criar um botão circular */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+#prev-month:hover,
+#next-month:hover {
+    background-color: #012d42; /* Cor de fundo alterada no hover */
+}
+
+#today-button {
+    background-color: #4FCB6B;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 10px;
+    margin-left: 5px; /* Adiciona um espaço à esquerda dos botões de navegação */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#today-button:hover {
+    background-color: #47b35b; /* Altera a cor de fundo no hover */
+    font-size: 20px;
+}
+
+#today-button-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #014357;
+    color: white;
+    justify-content: center;
+    height: 30px;   
+}
+
+#hide-list-button-box {
+    width: 295px;
+    position: absolute;
+    align-items: right;
+    display: flex;
+    justify-content: right;
+}
+
+#hide-list-button {
+    align-items: center;
+    background-color: #014357;
+    color: white;
+    justify-content: center;
+    width: 12%;
+    height: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: transparent;
+    font-size: 18px;
+    background-color: red;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCAUTO</title>
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/appointments.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="shortcut icon" href="assets/logoicon.png">  
+    <script src="calendar/calendar.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <a href="home.html" class="logo-box">
+            <img src="assets/logo.png" alt="DocAuto" class="logo">
+        </a>
+        <a href="profile.html" class="profile-icon">
+            <img src="assets/profile-icon.png" alt="Profile" class="profile-icon-img">
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button">SEARCH</button>
+    </div>
+
+    <div class="profile-box">
+        <div class="left-bar-line"></div>
+        <div class="bar-options">
+            <p class="fake-name-text">Hi Emily</p>
+            <a href="personal.html"><p class="personal-data-text">Personal Data</p></a>
+            <a href="address.html"><p class="manage-address-text">Manage Address</p></a>
+            <a><p class="my-wishlist-text">My Wishlist</p></a>
+            <a href="garage.html"><p class="my-garage-text">My Garage</p></a>
+            <a href="appointments.html"><p class="my-appointments-text">My Appointments</p></a>
+            <a><p class="settings-text">Settings</p></a>
+        </div>
+    </div>
+    <main>
+        <div id="calendar-container">
+            <div id="calendar">
+                <div id="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <h2 id="month-year"></h2>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <div  id="today-button-header"><button id="today-button">Hoje</button></div>
+                <div id="calendar-body">
+                    <div id="days-of-week">
+                        <div>Dom</div><div>Seg</div><div>Ter</div>
+                        <div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+                    </div>
+                    <div id="calendar-dates"></div>
+                </div>
+            </div>
+
+            <div id="event-list">      
+                <div id="hide-list-button-box"><button id="hide-list-button">X</button> <!-- Botão "X" para ocultar a lista --></div>
+                <h3>Eventos</h3>
+                <button id="add-event-button">Adicionar Evento</button>
+                <ul id="events"></ul>
+            </div>
+        </div>
+
+        <div id="event-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-title"></h2>
+                <form id="event-form">  
+                    <input type="hidden" id="event-date">
+                    <label for="event-title">Evento:</label>
+                    <input type="text" id="event-title" required>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

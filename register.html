@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - DOCAUTO</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+    <body>
+        <div class="top-bar">
+            <a href="garage.html" class="my-garage-icon">
+                <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+            </a>
+            <div class="logo-box">
+                <a href="home.html">
+                    <img src="assets/logo.png" alt="DocAuto" class="logo">
+                </a>
+            </div>
+            <a href="login.html" class="auth-icon" id="auth-link">
+                <img src="assets/profile.png" alt="Sign In" class="auth-icon-img" id="auth-icon-img">
+                <span id="auth-text">Sign In</span>
+            </a>
+        </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button">SEARCH</button>
+    </div>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Create a new account</h2>
+            <form id="registerForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="repeat-password">Repeat password</label>
+                <input type="password" id="repeat-password" name="repeat-password" required>
+                <div class="terms-container">
+                    <input type="checkbox" id="terms" name="terms" onclick="togglePasswordVisibility()">
+                    <label for="terms"><small>Show/Hide Password</a>.</small></label>
+                </div>
+                <div class="terms-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms"><small>I've read and accept the <a href="#">Privacy Policy</a>.</small></label>
+                </div>
+                <button type="submit">REGISTER</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Sign In</a> now!</p>
+        </div>
+    </div>
+    <script src="syncData.js"></script>
+    <script src="register.js"></script>
+    <script>
+        window.onload = function() {
+            let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+            if (currentUser) {
+                document.getElementById('auth-text').textContent = 'Profile';
+                document.getElementById('auth-link').href = 'profile.html';
+                document.getElementById('auth-icon-img').src = 'assets/profile.png';
+            } else {
+                document.getElementById('auth-text').textContent = 'Sign In';
+                document.getElementById('auth-link').href = 'login.html';
+                document.getElementById('auth-icon-img').src = 'assets/profile.png';
+            }
+        };
+    </script>
+</body>
+</html>

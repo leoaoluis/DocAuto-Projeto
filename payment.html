@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocAuto</title>
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <a href="home.html" class="logo-box">
+            <img src="assets/logo.png" alt="DocAuto" class="logo">
+        </a>
+        <a href="profile.html" class="profile-icon">
+            <img src="assets/profile-icon.png" alt="Profile" class="profile-icon-img">
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button">SEARCH</button>
+    </div>
+    
+
+    <!-- Novo conteúdo adicionado -->
+    <div class="container">
+        <img src="assets/filters.png" alt="Imagem" class="container-image">
+        <h2 class="container-title">Summary review</h2>
+        <p class="container-text">CarThings A7234 - Air filter</p>
+        <P class="container-text2">Quantity: 1</P>
+        <P class="container-text2">Shipping cost: 2,99$</P>
+        <P class="container-text2">Subtotal cart: 5,30$</P>
+        <P class="container-text3">Total: 8,30$</P>
+        <a href="javascript:void(0);" class="checkout-button" onclick="completePurchase()">Buy</a>
+    </div>
+
+    <div class="payment-container">
+        <h2>Payment method</h2>
+        <p><strong>Name:</strong> Emily</p>
+        <p><strong>Card Number:</strong> 123</p>
+        <p><strong>Expiration Date:</strong>adasd </p>
+        <p><strong>CVV:</strong> </p>
+        <div>
+            <button class="edit-button" onclick="editPaymentData()">Edit Payment Data</button>
+        </div>
+        <div>
+            <button class="remove-button" onclick="remove()">Remove</button>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+
+    
+    
+</body>
+</html>

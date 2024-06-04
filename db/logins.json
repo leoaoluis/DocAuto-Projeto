@@ -1,0 +1,19 @@
+{
+    "logins": [
+      {
+        "name": "admin",
+        "email": "admin@docauto.com",
+        "password": "admin",
+        "isAdministrator": true,
+        "isDistributor": false
+      },
+      {
+        "name": "user",
+        "email": "user@domain.com",
+        "password": "user",
+        "isAdministrator": false,
+        "isDistributor": false
+      }
+    ]
+  }
+  

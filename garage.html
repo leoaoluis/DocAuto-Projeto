@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCAUTO</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/garage.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="shortcut icon" href="assets/logoicon.png">     
+    <script src="garage.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="garage.html" class="my-garage-icon">
+            <img src="assets/my-garage-icon.png" alt="My Garage" class="my-garage-icon-img">
+        </a>
+        <a href="home.html" class="logo-box">
+            <img src="assets/logo.png" alt="DocAuto" class="logo">
+        </a>
+        <a href="profile.html" class="profile-icon">
+            <img src="assets/profile-icon.png" alt="Profile" class="profile-icon-img">
+        </a>
+    </div>
+    <div class="search-container">
+        <label for="type" class="search-label">Type:</label>
+        <select id="type" name="type" class="search-dropdown">
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="text" placeholder="Insert name or part number" class="search-input">
+        <button class="search-button">SEARCH</button>
+    </div>
+    <div class="profile-box">
+        <div class="left-bar-line"></div>
+        <div class="bar-options">
+            <p class="fake-name-text">Hi Emily</p>
+            <a href="personal.html"><p class="personal-data-text">Personal Data</p></a>
+            <a href="address.html"><p class="manage-address-text">Manage Address</p></a>
+            <a><p class="my-wishlist-text">My Wishlist</p></a>
+            <a href="garage.html"><p class="my-garage-text">My Garage</p></a>
+            <a href="appointments.html"><p class="my-appointments-text">My Appointments</p></a>
+            <a><p class="settings-text">Settings</p></a>
+        </div>
+    </div>
+
+    <div class="garage-container">
+        <div class="title-container">
+            <h1>My Garage</h1>
+        </div>
+        <div class="add-container">
+            <button id="add-vehicle-button">Add New Vehicle</button>
+        </div>
+        <div id="garage-message" class="message-container">Your garage is empty</div>
+        <div class="garage-table-container">
+            <table id="garage-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Plate</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>VIN</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="vehicle-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <h2 id="popup-title">New Vehicle</h2>
+            <span class="close">&times;</span>
+            <form id="vehicleForm" class="form-container">
+                <input type="hidden" id="edit-index" value="">
+                <div class="form-group">
+                    <label for="plate">Plate:</label>
+                    <input type="text" id="plate" name="plate" placeholder="XX-XX-XX" required style="font-family: 'Roboto';"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="brand">Brand:</label>
+                    <input type="text" id="brand" name="brand" placeholder="Ford" required style="font-family: 'Roboto';"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model:</label>
+                    <input type="text" id="model" name="model" placeholder="Focus" required style="font-family: 'Roboto';"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="date" id="year" name="year" placeholder="2018" required style="width: 9vw;height: 2.3vh;font-family: 'Roboto', sans-serif;text-transform: uppercase;"><br><br>
+                </div>
+                <p></p>
+                <button type="submit" class="add-vehicle-button" style="font-family: 'Roboto';">Add Vehicle</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="edit-vehicle-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <h2 id="popup-title">Edit Vehicle</h2>
+            <span class="close" onclick="closeEditPopup()">&times;</span>
+            <form id="editVehicleForm" class="form-container">
+                <input type="hidden" id="edit-index" value="">
+                <div class="form-group">
+                    <label for="plate">Plate:</label>
+                    <input type="text" id="edit-plate" name="plate" placeholder="XX-XX-XX" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="brand">Brand:</label>
+                    <input type="text" id="edit-brand" name="brand" placeholder="Ford" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model:</label>
+                    <input type="text" id="edit-model" name="model" placeholder="Focus" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="date" id="edit-year" name="year" placeholder="2018" required><br><br>
+                </div>
+                <p></p>
+                <button type="submit" class="add-vehicle-button">Save Changes</button>
+                <input type="hidden" id="edit-vin" name="vin">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/garage.js"></script>
+</body>
+</html>
