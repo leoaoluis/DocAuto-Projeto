@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     logoBox.addEventListener('click', function(event) {
         event.preventDefault();
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     });
 });
